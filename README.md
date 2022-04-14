@@ -3,7 +3,9 @@
 
 
 model-service
-这个是当前项目使用的对象，do对象
+这个是当前项目使用的对象，do对象，
+对外的对象，例如request，response（建议外部自己定义，但是有时候确实要微服务）
+枚举能写在这里嘛，还是放在common里面，字段的校验可以在 business-service 重新做
 common-service
 常量，utils，responseCode等
 abstract-service
