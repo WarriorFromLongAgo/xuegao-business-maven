@@ -7,5 +7,5 @@ package com.xuegao;
  * <br/> @author：xuegao
  * <br/> @date：2022/4/21 17:23
  */
-public abstract class AbstractService {
+public interface AbstractService {
 }
