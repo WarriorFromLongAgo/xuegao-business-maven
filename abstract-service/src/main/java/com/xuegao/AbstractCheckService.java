@@ -34,31 +34,14 @@ public interface AbstractCheckService {
      * checkLength
      * 判断入参的字段是否超过限制
      *
-     * @param collection:
+     * @param size:
      * @param length:
      * @param errorMsg:
      * @author xuegao
      * @date 2022/4/25 15:14
      */
-    default AbstractCheckService checkLength(Collection<Object> collection, int length, String errorMsg) {
-        if (collection.size() > length) {
-            throw new RuntimeException(errorMsg);
-        }
-        return this;
-    }
-
-    /**
-     * checkLength
-     * 判断入参的字段是否超过限制
-     *
-     * @param objectArr:
-     * @param length:
-     * @param errorMsg:
-     * @author xuegao
-     * @date 2022/4/25 15:14
-     */
-    default AbstractCheckService checkLength(Object[] objectArr, int length, String errorMsg) {
-        if (objectArr.length > length) {
+    default AbstractCheckService checkLength(int size, int length, String errorMsg) {
+        if (size > length) {
             throw new RuntimeException(errorMsg);
         }
         return this;
